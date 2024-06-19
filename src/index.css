@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Positioning of cart-box */
+.Transform {
+  @apply transform translate-x-[-50%] translate-y-[-50%] 
+  left-1/2 sm:left-[68%] md:left-[75%] midLg:left-[79%] 
+  midLg:top-[2.5rem] lg:left-[82%] lgXl:top-[0.5rem];  
+}
+
+/* Harmburger style */
+.bar {
+  display: block;
+  width: 17.5px;
+  height: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
+}
+
+.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.active .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.transition-All {
+  @apply transition-all duration-300 ease-linear;
+}
+
+/* Nav-Links */
+.text-hover {
+  position: relative;
+}
+
+/* Creates the Nav-links underline */
+.text-hover::before {
+  content: "";
+  position: absolute;
+  bottom: -3.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; 
+  height: 0.25rem; 
+  background-color: hsl(26, 100%, 55%);
+  transition: width 0.3s ease-out;
+}
+
+/* Shows the underline */
+.text-hover:hover::before {
+  width: 100%;
+}
+
+.show-cart {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+.hide-cart {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+}
+
+/* Thumbnail Images, plus & minus btns and Add to Cart btn */
+.hover {
+  @apply midLg:hover:opacity-50 midLg:transition midLg:duration-500 midLg:ease-out;
+}
+
+.sliderBtns {
+  @apply absolute top-1/2 border py-3 px-[0.9rem] bg-white rounded-[50%];
+}
+
+/* AddToCart Btn box-Shadow */
+.cartBtn-shadow {
+  --tw-shadow: 0 30px 35px -5px hsl(25, 78%, 82%), 0 8px 10px -6px hsl(25, 100%, 94%);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 hsl(26, 100%, 55%)), var(--tw-ring-shadow, 0 0 hsl(26, 100%, 55%)), var(--tw-shadow);
+}
