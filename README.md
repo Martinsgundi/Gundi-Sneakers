@@ -40,12 +40,12 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/gundi-sneakers-GHebWaZpYp)
 - Live Site URL: [Add live site URL here](https://gundi-sneakers.netlify.app/)
 
 
-## My process
 
+## My process
 
 ### Built with
 
